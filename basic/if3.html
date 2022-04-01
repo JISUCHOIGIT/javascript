@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자에게 국어,영어,수학점수를 입력받아 평균을 구하기
+      //promt에서 숫자를 입력하면 string으로 받아들임
+      let math = parseInt(prompt("수학점수"));
+      let eng = Number(prompt("영어점수"));
+      let kor = Number(prompt("국어점수"));
+
+      let avg = (math + eng + kor) / 3;
+      alert(avg);
+      //평균이 90 이상이면 A, 80이상이면 B, 70이상이면 C, 나머지는 D
+      if (avg >= 90) {
+        alert("A");
+        // console.log("A");
+      } else if (avg >= 80) {
+        alert("B");
+        // console.log("B");
+      } else if (avg >= 70) {
+        // console.log("C");
+        alert("C");
+      } else {
+        alert("D");
+        // console.log("D");
+      }
+    </script>
+  </body>
+</html>

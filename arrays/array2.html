@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = new Array();
+      arr.push(12); //'12'
+      arr.push(6);
+      arr.push(14);
+      arr.push(3);
+      arr.push(9);
+      arr.push(17);
+
+      document.write(arr + "<br>");
+      // join : 배열 사이 "?"추가
+      document.write(arr.join("-") + "<br>");
+      // concat([]) : 연결
+      document.write(arr.concat([2, 4, 6, 8, 10]) + "<br>");
+      // slice : 자르기
+      document.write(arr.slice(1, 4) + "<br>");
+      // 배열 안 숫자는 string 개념으로 다루기 때문에 sort() 안됨
+      document.write(arr.sort() + "<br>");
+      // 실제 문자가 들어가 있는 경우는 sort 정렬 가능
+      document.write(["사당", "강남", "한남", "옥수"].sort() + "<br>");
+      // reverse : 역정렬
+      document.write(["사당", "강남", "한남", "옥수"].reverse() + "<br>");
+      const fruits = ["Bnana", "Orange", "Apple", "Mango"];
+      fruits.sort(); // 배열 정렬
+      document.write(fruits + "<br>");
+      fruits.reverse(); // 배열 거꾸로 출력
+      document.write(fruits + "<br>");
+    </script>
+  </body>
+</html>

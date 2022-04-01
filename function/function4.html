@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //익명함수 - 호이스팅 안됨
+      let sum = 0;
+      // 익명함수에 대한 결과를 output에 담기
+      //function 이름이 없음
+      const output = function () {
+        for (var i = 1; i < 11; i++) {
+          sum += i;
+        }
+        document.write(sum);
+      };
+      output();
+
+      document.write("<br>");
+
+      const result = function add(a, b) {
+        return a + b;
+      };
+
+      // add(3, 5); //function4.html:27 Uncaught ReferenceError: add is not defined
+      // 직접 호출 불가
+      // 아래와 같이 호출해야함
+      document.write(result(3, 5));
+    </script>
+  </body>
+</html>
