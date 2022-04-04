@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">이름</label>
+      <!-- onchange: text필드 안에서 많이 쓰고 원래 있던 값에서 포커스를 빼면 호출되는 이벤트 -->
+      <input type="text" name="name" id="name" onchange="lower()" />
+    </div>
+    <div>
+      <label for="">나이</label>
+      <input type="text" name="age" id="age" onblur="lower2()" />
+    </div>
+    <script>
+      // onchange() : 내용 변경 후 포커스 이동하면 내용이 변경
+      // onblur() : 포커스만 이동되면 무조건 호출
+      function lower() {
+        // alert("onchagne()");
+        // name 대문자 => name 소문자 변경
+        let name = document.querySelector("#name"); // 요소만 가져오기
+        name.value = name.value.toLowerCase(); // 값 가져오기
+      }
+
+      function lower2() {
+        alert("onblur()");
+      }
+    </script>
+  </body>
+</html>
