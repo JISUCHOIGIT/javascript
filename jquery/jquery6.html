@@ -7,12 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="demo" onlclick="good()">Click me</p>
+    <h1 class="header" name="" id="">Header1</h1>
+    <h2>Header2</h2>
+    <script src="./jquery-3.6.0.min.js"></script>
     <script>
-      function good() {
-        //innerHTML : Click me 내용 변경
-        document.querySelector("#demo").innerHTML = "Good Job";
-      }
+      $(".header").click(function () {
+        //$(this).remove();
+        // h1의 class 속성만 제거
+        $(this).removeClass("header");
+      });
     </script>
   </body>
 </html>

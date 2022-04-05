@@ -7,12 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="demo" onlclick="good()">Click me</p>
     <script>
-      function good() {
-        //innerHTML : Click me 내용 변경
-        document.querySelector("#demo").innerHTML = "Good Job";
+      // scope : global, function, block
+
+      // global scope
+      let value = "hello";
+
+      function myFunction() {
+        //fuction scope
+        let value = "world";
+        console.log(value);
       }
+
+      myFunction();
+      console.log(value);
     </script>
   </body>
 </html>

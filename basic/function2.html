@@ -7,12 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="demo" onlclick="good()">Click me</p>
     <script>
-      function good() {
-        //innerHTML : Click me 내용 변경
-        document.querySelector("#demo").innerHTML = "Good Job";
+      // 함수 사용 - 전달 인자로 함수를 사용함
+      //             리턴값으로도 함수를 사용함
+
+      function foo() {
+        console.log("함수는 전달 인자로 사용됨");
       }
+
+      const f1 = function (args) {
+        args();
+      };
+
+      f1(foo);
     </script>
   </body>
 </html>

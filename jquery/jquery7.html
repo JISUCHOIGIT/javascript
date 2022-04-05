@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Hello World</button>
+    <div>
+      <img src="../object/left-arrow.png" alt="" />
+      <input type="button" value="변경" />
+    </div>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      //jquery에서 속성 추가 혹은 변경 => attr()
+      let b = $("button");
+      b.attr("name", "hello");
+      b.attr("disabled", "");
+
+      let change = true;
+
+      $("[type='button']").click(function () {
+        //이미지를 교체
+        if (change) {
+          $("img").attr("src", "../object/dog.jpg");
+          change = false;
+        } else {
+          $("img").attr("src", "../object/left-arrow.png");
+          change = true;
+        }
+      });
+
+      //button 태그에 name 속성 추가 let b = document.querySelector("button");
+      //   b.setAttribute("name", "hello");
+      //button 태그에 disabled 속성 추가
+      //disabled : 버튼을 누르지 못하게 하는 기능
+      //   b.setAttribute("disabled", "");
+      //속성을 새로 세팅하기 : setAttribute //속성을 가져오기 : getAttribute
+    </script>
+  </body>
+</html>

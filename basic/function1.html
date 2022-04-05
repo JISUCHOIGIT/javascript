@@ -7,12 +7,16 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="demo" onlclick="good()">Click me</p>
     <script>
-      function good() {
-        //innerHTML : Click me 내용 변경
-        document.querySelector("#demo").innerHTML = "Good Job";
-      }
+      // 자바스크립트에서 함수 생성하는 방식
+      // function 함수명 (){} / 변수에 함수를 대입
+      // 먼저 선언 후 호출
+
+      let f1 = function () {
+        console.log("안녕하세요");
+      };
+
+      f1();
     </script>
   </body>
 </html>
